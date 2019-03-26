@@ -16,9 +16,10 @@ def draw_be(bX, bY, sizeX, sizeY, win):
 def draw_h20(wX, wY, sizeX, sizeY, win):
     draw_rect(wX, wY, "blue", sizeX, sizeY, win)
     
-def draw_cir(cX, cY, radius, cColor, win):
+def draw_cir(cX, cY, radius, cColor1, cColor2, win):
     circle = Circle(Point(cX, cY), radius)
-    circle. setFill(cColor)
+    circle. setFill(cColor1)
+    circle.setOutline(cColor2)
     circle.draw(win)
     
 winSz = 1000
@@ -29,9 +30,9 @@ win.setCoords(0,0, winSz, winSz)
 draw_sky(0,0, winSz, winSz, win)
 draw_h20(0,0, winSz, winSz * .7, win)
 draw_be(0,0, winSz, winSz * .5, win)
-draw_cir(winSz/2, winSz/4, 34, "white", win)
+draw_cir(winSz/2, winSz/4, 34, "white", "black", win) # Volleyball
 
-draw_cir(333,950, 25, "white", win)
+draw_cir(333,950, 25, "white", "white", win)
 
 
 
