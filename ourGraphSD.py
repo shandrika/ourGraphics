@@ -21,14 +21,14 @@ def draw_cir(cX, cY, radius, cColor, win):
     circle. setFill(cColor)
     circle.draw(win)
     
-sqSz = 100
+winSz = 1000
 
-win = GraphWin("Let's Play Volleyball!", sqSz * 10, sqSz * 10)
-win.setCoords(0,0, sqSz * 10, sqSz * 10)
+win = GraphWin("Let's Play Volleyball!", winSz, winSz)
+win.setCoords(0,0, winSz, winSz)
 
-draw_sky(0,0, sqSz * 10, sqSz * 10, win)
-draw_h20(0,0, sqSz * 10, sqSz * 7, win)
-draw_be(0,0, sqSz * 10, sqSz * 5, win)
-draw_cir(sqSz/2, sqSz/4, 34, "white", win)
+draw_sky(0,0, winSz, winSz, win)
+draw_h20(0,0, winSz, winSz * .7, win)
+draw_be(0,0, winSz, winSz * .5, win)
+draw_cir(winSz/2, winSz/4, 34, "white", win)
 
 
