@@ -31,4 +31,8 @@ draw_h20(0,0, winSz, winSz * .7, win)
 draw_be(0,0, winSz, winSz * .5, win)
 draw_cir(winSz/2, winSz/4, 34, "white", win)
 
+draw_cir(333,950, 25, "white", win)
+
+
+
 
