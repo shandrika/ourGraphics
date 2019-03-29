@@ -1,4 +1,5 @@
 from graphics import *
+from random import *
 
 def draw_rect(rX, rY, rColor, sizeX, sizeY, win):
     square = Rectangle(Point(rX, rY),
@@ -32,7 +33,13 @@ draw_h20(0,0, winSz, winSz * .7, win)
 draw_be(0,0, winSz, winSz * .5, win)
 draw_cir(winSz/2, winSz/4, 34, "white", "black", win) # Volleyball
 
-draw_cir(333,950, 25, "white", "white", win)
+
+
+for i in range(16):
+    clX = randint(100,200)
+    clY = randint(910, 950)
+    clSz = randint(1, 35)
+    draw_cir(clX, clY, clSz, "white", "white", win)
 
 
 
