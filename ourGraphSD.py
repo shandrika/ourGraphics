@@ -12,14 +12,14 @@ def draw_sky(sX, sY, sizeX, sizeY, win):
     draw_rect(sX, sY, "sky blue", sizeX, sizeY, win)
     
 def draw_be(bX, bY, sizeX, sizeY, win):
-    draw_rect(bX, bY, "yellow", sizeX, sizeY, win)
+    draw_rect(bX, bY, "light yellow", sizeX, sizeY, win)
     
 def draw_h20(wX, wY, sizeX, sizeY, win):
     draw_rect(wX, wY, "blue", sizeX, sizeY, win)
     
 def draw_cir(cX, cY, radius, cColor1, cColor2, win):
     circle = Circle(Point(cX, cY), radius)
-    circle. setFill(cColor1)
+    circle.setFill(cColor1)
     circle.setOutline(cColor2)
     circle.draw(win)
     
@@ -33,14 +33,12 @@ draw_h20(0,0, winSz, winSz * .7, win)
 draw_be(0,0, winSz, winSz * .5, win)
 draw_cir(winSz/2, winSz/4, 34, "white", "black", win) # Volleyball
 
-
-
-for i in range(16):
-    clX = randint(100,200)
-    clY = randint(910, 950)
-    clSz = randint(1, 35)
-    draw_cir(clX, clY, clSz, "white", "white", win)
-
+puffs = randint(10, 18)
+for i in range(puffs):
+        clX = randint(100, 200)
+        clY = randint(910, 950)
+        clSz = randint(1, 35)
+        draw_cir(clX, clY, clSz, "white", "white", win)
 
 
 
