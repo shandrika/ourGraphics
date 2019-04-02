@@ -22,7 +22,14 @@ def draw_cir(cX, cY, radius, cColor1, cColor2, win):
     circle.setFill(cColor1)
     circle.setOutline(cColor2)
     circle.draw(win)
-    
+
+def draw_puff(pX, pY, radius, pColor, win):
+    puff = Circle(Point(pX, pY), radius)
+    puff.setFill(pColor)
+    puff.setOutline(pColor)
+    puff.draw(win)
+
+
 winSz = 1000
 
 win = GraphWin("Let's Play Volleyball!", winSz, winSz)
@@ -35,10 +42,10 @@ draw_cir(winSz/2, winSz/4, 34, "white", "black", win) # Volleyball
 
 puffs = randint(10, 18)
 for i in range(puffs):
-        clX = randint(100, 200)
-        clY = randint(910, 950)
-        clSz = randint(1, 35)
-        draw_cir(clX, clY, clSz, "white", "white", win)
+        pX = randint(100, 200)
+        pY = randint(910, 950)
+        pSz = randint(1, 35)
+        draw_puff(pX, pY, pSz, "white", win)
 
 
 
