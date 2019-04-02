@@ -29,7 +29,15 @@ def draw_puff(pX, pY, radius, pColor, win):
     puff.setOutline(pColor)
     puff.draw(win)
 
+def draw_cloud(clX, clY, pMin, pMax, clColor, win):
+    puffs = randint(pMin, pMax)
+    for i in range(puffs):
+        pX = randint(clX - 50, clX + 50)
+        pY = randint(clY - 20, clY + 20)
+        pSz = randint(5, 35)
+        draw_puff(pX, pY, pSz, clColor, win)
 
+    
 winSz = 1000
 
 win = GraphWin("Let's Play Volleyball!", winSz, winSz)
@@ -39,13 +47,5 @@ draw_sky(0,0, winSz, winSz, win)
 draw_h20(0,0, winSz, winSz * .7, win)
 draw_be(0,0, winSz, winSz * .5, win)
 draw_cir(winSz/2, winSz/4, 34, "white", "black", win) # Volleyball
-
-puffs = randint(10, 18)
-for i in range(puffs):
-        pX = randint(100, 200)
-        pY = randint(910, 950)
-        pSz = randint(1, 35)
-        draw_puff(pX, pY, pSz, "white", win)
-
-
+draw_cloud(100, 930, 10, 18, "white", win)
 
