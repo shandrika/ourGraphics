@@ -28,10 +28,9 @@ winSz = 1000
 win = GraphWin("Let's Play Volleyball!", winSz, winSz)
 win.setCoords(0,0, winSz, winSz)
 
-draw_sky(0,0, winSz, winSz, win)
-draw_h20(0,0, winSz, winSz * .7, win)
-draw_be(0,0, winSz, winSz * .5, win)
-draw_cir(winSz/2, winSz/4, 34, "white","black", win)
+draw_sky(0,0, winSz, winSz, win) #Sky
+draw_h20(0,0, winSz, winSz * .7, win) #Water
+draw_be(0,0, winSz, winSz * .5, win) #Beach
 
 # Creation of Sand Spots
 for s in range(1000):
@@ -39,3 +38,4 @@ for s in range(1000):
     saY = randint(10,490)
     saSz = randint(1,2)
     draw_cir(saX, saY, saSz, "burlywood1","burlywood1", win)
+
