@@ -68,11 +68,9 @@ for s in range(1000):
     saX = randint(10,1000)
     saY = randint(10,490)
     saSz = randint(1,2)
-    draw_cir(saX, saY, saSz, "burlywood1","burlywood1", win)
+    draw_cir(saX, saY * .8, saSz, "burlywood1","burlywood1", win) # sand
 
-    
-
-#draw_cir(winSz/2, winSz/5, 34, "white", "black", win) #Volleyball
+draw_cir(winSz/2, winSz/5, 34, "white", "black", win) #Volleyball
 
 
 
