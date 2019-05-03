@@ -45,11 +45,9 @@ def draw_clouds(sX, sY, clNum, clBumpX, clBumpY, clColor, win):
         
 def draw_waves(winSzX, wY, wRad, wColor1, wColor2, win):
     waves = int(winSz / wRad * 2)
-    #for r in range(3):
-    for i in range(waves):
-           draw_cir(wRad + i * wRad * 2, wY , wRad, wColor1, wColor2, win)
-    
-    
+    for r in range(1):
+        for i in range(waves):
+                draw_cir(wRad + i * wRad * 2, wY + r * wRad * 2, wRad, wColor1, wColor2, win)
     
      
 winSz = 1000
@@ -57,12 +55,12 @@ winSz = 1000
 win = GraphWin("Let's Play Volleyball!", winSz, winSz)
 win.setCoords(0,0, winSz, winSz)
 
-
-draw_h20(0,0, winSz, winSz * .7, win)
-draw_be(0,0, winSz, winSz * .5, win)
+#Called Funcs
+draw_h20(0,0, winSz, winSz * .7, win) #water
+draw_be(0,0, winSz, winSz * .4, win) #beach 
 draw_sky(0,winSz/2 + 100, winSz, winSz * .5, win)
 draw_waves(winSz,winSz/2 + 100, 15, "sky blue", "sky blue", win)
 
-draw_cir(winSz/2, winSz/4, 34, "white", "black", win) # Volleyball
+#draw_cir(winSz/2, winSz/5, 34, "white", "black", win) #Volleyball
 draw_clouds(100, 930, 6, 150, 100, "white", win)
 
