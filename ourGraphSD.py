@@ -29,6 +29,7 @@ win = GraphWin("Let's Play Volleyball!", winSz, winSz)
 win.setCoords(0,0, winSz, winSz)
 
 draw_sky(0,0, winSz, winSz, win) #Sky
+draw_cir(winSz/2, winSz/1.5, 125, "yellow","yellow", win) #Sun
 draw_h20(0,0, winSz, winSz * .7, win) #Water
 draw_be(0,0, winSz, winSz * .5, win) #Beach
 
@@ -38,4 +39,6 @@ for s in range(1000):
     saY = randint(10,490)
     saSz = randint(1,2)
     draw_cir(saX, saY, saSz, "burlywood1","burlywood1", win)
+
+    
 
