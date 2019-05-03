@@ -58,9 +58,21 @@ win.setCoords(0,0, winSz, winSz)
 #Called Funcs
 draw_h20(0,0, winSz, winSz * .7, win) #water
 draw_be(0,0, winSz, winSz * .4, win) #beach 
-draw_sky(0,winSz/2 + 100, winSz, winSz * .5, win)
-draw_waves(winSz,winSz/2 + 100, 15, "sky blue", "sky blue", win)
+draw_sky(0,winSz/2 + 100, winSz, winSz * .5, win) #sky
+draw_waves(winSz,winSz/2 + 100, 15, "sky blue", "sky blue", win) #waves
+draw_cir(winSz/2, winSz/1.17, 125, "yellow","yellow", win) #Sun
+draw_clouds(100, 930, 6, 150, 100, "white", win) #Clouds
+
+# Creation of Sand Spots
+for s in range(1000):
+    saX = randint(10,1000)
+    saY = randint(10,490)
+    saSz = randint(1,2)
+    draw_cir(saX, saY, saSz, "burlywood1","burlywood1", win)
+
+    
 
 #draw_cir(winSz/2, winSz/5, 34, "white", "black", win) #Volleyball
-draw_clouds(100, 930, 6, 150, 100, "white", win)
+
+
 
